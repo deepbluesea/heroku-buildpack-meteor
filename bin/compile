@@ -7,10 +7,7 @@ PATH=$METEOR_HOME:$PATH
 
 install_meteor() {
   mkdir ~/.n/ && cd ~/.n/
-  git clone git://github.com/visionmedia/n.git ~/.n
-  cd $BUILD_DIR/n
-  make install
-  ls
+  git clone git://github.com/visionmedia/n.git $METEOR_HOME
   
 }
 
