@@ -1,6 +1,6 @@
 #!/bin/sh
 
-build_dir = $1
+BUILD_DIR=$1
 CACHE_DIR=$2
 METEOR_HOME=$BUILD_DIR/.meteor/checkout
 PATH=$METEOR_HOME:$PATH
