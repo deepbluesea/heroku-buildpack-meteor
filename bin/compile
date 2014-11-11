@@ -9,6 +9,7 @@ build() {
     echo "Building meteor bundle"
     cd $BUILD_DIR
      git clone https://github.com/deepbluesea/meteor.git $BUILD_DIR/v
+     meteor build $BUILD_DIR/v
      ls
     
   )
@@ -18,10 +19,3 @@ build() {
 [ ! -d $CACHE_DIR ] && mkdir $CACHE_DIR
 
 build
-
-echo "Checking for post_compile script"
-if [ -f $BUILD_DIR/bin/post_compile ] ; then
-    echo "-----> Running post_compile hook"
-    chmod +x $BUILD_DIR/bin/post_compile
-    $BUILD_DIR/bin/post_compile
-fi
