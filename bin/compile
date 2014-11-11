@@ -9,8 +9,8 @@ install_meteor() {
   echo $BUILD_DIR
   echo $CACHE_DIR
   echo $METEOR_HOME
-  
-  git clone git://github.com/visionmedia/n.git $BUILD_DIR/n && cd n && make install && n stable
+  #$BUILD_DIR/n && cd n && make install && n stable
+  git clone git://github.com/visionmedia/n.git $BUILD_DIR
   ls
   
 }
