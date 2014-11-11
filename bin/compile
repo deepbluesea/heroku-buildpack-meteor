@@ -14,7 +14,7 @@ mv node-v0.10.13-linux-x64 0.10.13
 ln -s 0.10.13 current
   cd /usr/local/bin
 mkdir -p ~/meteor && cd ~/meteor
-	git clone git://github.com/meteor/meteor.git /usr/local/bin
+	git clone git://github.com/meteor/meteor.git
 	cd meteor && zip -r ../../meteor.zip .
 }
 
