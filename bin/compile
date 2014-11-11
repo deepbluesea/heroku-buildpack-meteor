@@ -12,8 +12,12 @@ curl -O http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz
 tar -xzf node-v0.10.13-linux-x64.tar.gz
 mv node-v0.10.13-linux-x64 0.10.13
 ln -s 0.10.13 current
+ls
+cd current
+ls
 cd 0.10.13
 ls
+export PATH="~/.nodes/current/bin:$PATH"
 mkdir -p ~/meteor && cd ~/meteor
 ls
 git clone git://github.com/meteor/meteor.git
