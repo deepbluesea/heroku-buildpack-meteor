@@ -2,28 +2,21 @@
 
 BUILD_DIR=$1
 CACHE_DIR=$2
-METEOR_HOME=$BUILD_DIR/.meteor:$METEOR_HOME
-
-install_meteor() {
-  mkdir ~/.n/ && cd ~/.n/
-  git clone git://github.com/visionmedia/n.git $METEOR_HOME
-  
-}
+METEOR_HOME=~/.meteor:$METEOR_HOME
 
 build() {
   (
     echo "Building meteor bundle"
-    meteor build $CACHE_DIR/bundle
-    mkdir -p $BUILD_DIR/.meteor/local/build
-    mv $CACHE_DIR/bundle $BUILD_DIR/.meteor/local/build
-    rm $CACHE_DIR/bundle
+    cd $BUILD_DIR
+     git https://github.com/deepbluesea/meteor.git $BUILD_DIR
+     ls
+    
   )
 }
 
 [ ! -d $BUILD_DIR ] && mkdir $BUILD_DIR
 [ ! -d $CACHE_DIR ] && mkdir $CACHE_DIR
 
-install_meteor
 build
 
 echo "Checking for post_compile script"
