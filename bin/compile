@@ -24,7 +24,6 @@ build() {
 [ ! -d $BUILD_DIR ] && mkdir $BUILD_DIR
 [ ! -d $CACHE_DIR ] && mkdir $CACHE_DIR
 cd $BUILD_DIR
-git clone git@github.com:visionmedia/n.git && cd n && make install && n stable
 install_meteor
 build
 
