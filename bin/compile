@@ -18,6 +18,9 @@ mkdir -p ~/meteor && cd ~/meteor
 ls
 	git clone git://github.com/meteor/meteor.git
 	ls
+	cd 
+	meteor
+	ls
 	zip -r meteor.zip .
 }
 
