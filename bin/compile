@@ -12,16 +12,14 @@ curl -O http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz
 tar -xzf node-v0.10.13-linux-x64.tar.gz
 mv node-v0.10.13-linux-x64 0.10.13
 ln -s 0.10.13 current
-  cd /usr/local/bin
+cd 0.10.13
+ls
 mkdir -p ~/meteor && cd ~/meteor
 ls
-	git clone git://github.com/meteor/meteor.git ~/meteor
+	git clone git://github.com/meteor/meteor.git
 	ls
-	zip -r ../../meteor.zip .
+	zip -r meteor.zip .
 }
-
-[ ! -d meteor ] && mkdir meteor
-[ ! -d $CACHE_DIR ] && mkdir $CACHE_DIR
 
 install_meteor
 
