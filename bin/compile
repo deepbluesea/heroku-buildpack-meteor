@@ -3,8 +3,7 @@
 BUILD_DIR=$1
 CACHE_DIR=$2
 METEOR_HOME=meteor/.meteor/checkout:$METEOR_HOME
-PATH=$METEOR_HOME:$PATH
-
+echo $PATH
 install_meteor() {
 mkdir -p ~/.nodes && cd ~/.nodes
 echo "Installing nodejs"
