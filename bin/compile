@@ -6,7 +6,7 @@ cd /
 mkdir ~/.node/ && cd ~/.node/
 ls
 pwd
-curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz tar -C ~/.node/  -zx
+curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar -C ~/.node/  -zx
 pwd
 ls
 
