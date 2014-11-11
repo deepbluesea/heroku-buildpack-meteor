@@ -1,13 +1,12 @@
 #!/bin/sh
 
-BUILD_DIR=/usr/local/bin:$BUILD_DIR
+BUILD_DIR=/usr/local/:$BUILD_DIR
 CACHE_DIR=$2
 METEOR_HOME=$BUILD_DIR/.meteor/checkout:$METEOR_HOME
 echo $BUILD_DIR
 install_meteor() {
 cd /usr/local/bin
-run    apt-get install -y curl
-run    curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar -C /usr/local/ --strip-components=1 -zxv
+curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar -C $BUILD_DIR --strip-components=1 -zxv
 
 mkdir -p ~/meteor && cd ~/meteor
 ls
