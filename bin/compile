@@ -9,7 +9,7 @@ build() {
     echo "Building meteor bundle"
     cd $BUILD_DIR
      git clone https://github.com/deepbluesea/meteor
-     meteor build $BUILD_DIR/meteor
+     meteor build --directory --server "http://localhost:3000"
      ls
     
   )
