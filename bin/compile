@@ -12,7 +12,6 @@ install_meteor() {
   echo "Installing meteor"
   git clone git@github.com:visionmedia/n.git $BUILD_DIR/n && cd n && make install && n stable
   ls
-  git clone git://github.com/deepbluesea/meteor $BUILD_DIR/meteor
   
 }
 
@@ -28,7 +27,7 @@ build() {
 
 [ ! -d $BUILD_DIR ] && mkdir $BUILD_DIR
 [ ! -d $CACHE_DIR ] && mkdir $CACHE_DIR
-cd $BUILD_DIR
+
 install_meteor
 build
 
