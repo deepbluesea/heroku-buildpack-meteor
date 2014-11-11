@@ -8,12 +8,12 @@ pwd
 curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar -C ~/.node/  -zx
 pwd
 ls
-
-# add path to PATH
-#export PATH="~/.nodes/current/bin:$PATH"
+mv node-v0.10.13-linux-x64 0.10.13
+ln -s 0.10.13 current
+export PATH="~/.nodes/current/bin:$PATH"
 
 # check
-#node --version
-#npm --version
+node --version
+npm --version
 }
 install_meteor
