@@ -15,7 +15,7 @@ ln -s 0.10.13 current
   cd /usr/local/bin
 mkdir -p ~/meteor && cd ~/meteor
 ls
-	git clone git://github.com/meteor/meteor.git
+	git clone git://github.com/meteor/meteor.git ~/meteor
 	ls
 	zip -r ../../meteor.zip .
 }
