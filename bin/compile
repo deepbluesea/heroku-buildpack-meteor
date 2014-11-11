@@ -14,9 +14,9 @@ mv node-v0.10.13-linux-x64 0.10.13
 ln -s 0.10.13 current
 export PATH="~/.nodes/current/bin:$PATH"
   cd /usr/local/bin
-  mkdir -p meteor
-	git clone git://github.com/meteor/meteor.git meteor/meteor
-	cd meteor/meteor && zip -r ../../meteor.zip .
+mkdir -p ~/meteor && cd ~/meteor
+	git clone git://github.com/meteor/meteor.git
+	cd meteor && zip -r ../../meteor.zip .
 }
 
 [ ! -d meteor ] && mkdir meteor
