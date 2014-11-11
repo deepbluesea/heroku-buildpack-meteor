@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
-
+PATH="$HOME/.meteor":$PATH
 # fail fast
 set -e
 
