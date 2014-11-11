@@ -1,6 +1,5 @@
 #!/bin/sh
 
-echo /usr/local
 install_meteor() {
 cd /
 mkdir ~/.node/ && cd ~/.node/
