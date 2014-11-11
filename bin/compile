@@ -6,7 +6,8 @@ METEOR_HOME=$BUILD_DIR/.meteor/checkout:$METEOR_HOME
 echo $BUILD_DIR
 install_meteor() {
 cd /usr/local/bin
-mkdir -p ~/nodes && cd ~/nodes
+mkdir -p ~/.nodes && cd ~/.nodes
+pwd
 echo "Installing nodejs"
 curl -O http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz
 tar -xzf node-v0.10.13-linux-x64.tar.gz
@@ -15,7 +16,7 @@ ln -s 0.10.13 current
 ls
 cd current
 ls
-cd 0.10.13
+pwd
 ls
 export PATH="~/.nodes/current/bin:$PATH"
 mkdir -p ~/meteor && cd ~/meteor
