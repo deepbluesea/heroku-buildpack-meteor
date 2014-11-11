@@ -6,19 +6,9 @@ METEOR_HOME=$BUILD_DIR/.meteor/checkout:$METEOR_HOME
 echo $BUILD_DIR
 install_meteor() {
 cd /usr/local/bin
-mkdir -p ~/.nodes && cd ~/.nodes
-pwd
-echo "Installing nodejs"
-curl -O http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz
-tar -xzf node-v0.10.13-linux-x64.tar.gz
-mv node-v0.10.13-linux-x64 0.10.13
-ln -s 0.10.13 current
-ls
-cd current
-ls
-pwd
-ls
-export PATH="~/.nodes/current/bin:$PATH"
+run    apt-get install -y curl
+run    curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar -C /usr/local/ --strip-components=1 -zxv
+
 mkdir -p ~/meteor && cd ~/meteor
 ls
 git clone git://github.com/meteor/meteor.git
