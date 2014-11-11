@@ -8,7 +8,4 @@ ls
 pwd
 curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar -C ~/.node/ --strip-components=1 -zxv
 }
-
 install_meteor
-
-fi
