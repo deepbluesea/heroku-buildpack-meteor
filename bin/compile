@@ -4,7 +4,13 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 METEOR_HOME=$BUILD_DIR/.meteor/checkout
 PATH=$METEOR_HOME:$PATH
-
+mkdir -p ~/.nodes && cd ~/.nodes
+curl -O http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz
+tar -xzf node-v0.10.13-linux-x64.tar.gz
+rm node-v0.10.13-linux-x64.tar.gz
+mv node-v0.10.13-linux-x64 0.10.13
+ln -s 0.10.13 current
+export PATH="~/.nodes/current/bin:$PATH"
 install_meteor() {
   cd $BUILD_DIR
   echo "Installing meteor"
@@ -26,14 +32,6 @@ build() {
 
 install_meteor
 build
-mkdir -p ~/.nodes && cd ~/.nodes
-curl -O http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz
-tar -xzf node-v0.10.13-linux-x64.tar.gz
-rm node-v0.10.13-linux-x64.tar.gz
-mv node-v0.10.13-linux-x64 0.10.13
-ln -s 0.10.13 current
- echo "Bnd"
-export PATH="~/.nodes/current/bin:$PATH"
 
 echo "Checking for post_compile script"
 if [ -f $BUILD_DIR/bin/post_compile ] ; then
