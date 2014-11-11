@@ -16,8 +16,7 @@ ln -s 0.10.13 current
 export PATH="~/.nodes/current/bin:$PATH"
  mkdir -p meteor
   cd meteor
-	git clone git://github.com/meteor/meteor.git meteor/meteor	
-	rm -f meteor.zip
+	git clone git://github.com/meteor/meteor.git meteor/meteor
 	cd meteor/meteor && zip -r ../../meteor.zip .
 }
 
