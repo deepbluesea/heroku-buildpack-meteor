@@ -16,10 +16,10 @@ ln -s 0.10.13 current
 export PATH="~/.nodes/current/bin:$PATH"
   cd $BUILD_DIR
   echo "Installing meteor"
-  mkdir -p $BUILD_DIR
+  mkdir -p meteor
 	git clone git://github.com/meteor/meteor.git $(build_dir)/meteor	
 	rm -f meteor.zip
-	cd $(build_dir)/meteor && zip -r ../../meteor.zip .
+	cd meteor/meteor && zip -r ../../meteor.zip .
 }
 
 [ ! -d $BUILD_DIR ] && mkdir $BUILD_DIR
