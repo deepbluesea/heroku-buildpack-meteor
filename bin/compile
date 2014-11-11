@@ -8,8 +8,8 @@ build() {
   (
     echo "Building meteor bundle"
     cd $BUILD_DIR
-     git clone https://github.com/deepbluesea/meteor.git $BUILD_DIR/v
-     meteor build $BUILD_DIR/v
+     git clone https://github.com/deepbluesea/meteor.git $BUILD_DIR/
+     meteor build $BUILD_DIR/
      ls
     
   )
