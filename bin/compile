@@ -3,7 +3,6 @@
 BUILD_DIR=$1
 CACHE_DIR=$2
 METEOR_HOME=$BUILD_DIR/.meteor:$METEOR_HOME
-PATH=$METEOR_HOME:$PATH
 
 install_meteor() {
   mkdir ~/.n/ && cd ~/.n/
