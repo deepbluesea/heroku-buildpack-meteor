@@ -6,7 +6,7 @@ METEOR_HOME=meteor/.meteor/checkout:$METEOR_HOME
 echo $PATH
 install_meteor() {
 cd ./app
-mkdir -p ~/.nodes && cd ~/.nodes
+mkdir -p nodes && cd nodes
 echo "Installing nodejs"
 curl -O http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz
 tar -xzf node-v0.10.13-linux-x64.tar.gz
