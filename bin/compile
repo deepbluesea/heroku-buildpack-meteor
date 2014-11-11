@@ -5,15 +5,14 @@ CACHE_DIR=$2
 METEOR_HOME=meteor/.meteor/checkout:$METEOR_HOME
 echo $PATH
 install_meteor() {
-cd ./app
+cd /app
 mkdir -p nodes && cd nodes
 echo "Installing nodejs"
 curl -O http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz
 tar -xzf node-v0.10.13-linux-x64.tar.gz
 mv node-v0.10.13-linux-x64 0.10.13
 ln -s 0.10.13 current
-export PATH="~/.nodes/current/bin:$PATH"
-  cd /usr/local/bin
+  cd /app
 mkdir -p ~/meteor && cd ~/meteor
 	git clone git://github.com/meteor/meteor.git
 	cd meteor && zip -r ../../meteor.zip .
