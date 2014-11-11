@@ -5,8 +5,8 @@ CACHE_DIR=$2
 METEOR_HOME=$BUILD_DIR/.meteor/checkout:$METEOR_HOME
 echo /usr/local
 install_meteor() {
-cd /usr/local
-curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar -C ~/.node --strip-components=1 -zxv
+mk ~/.node/ && cd ~/.node/
+curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar -C ~/.node/ --strip-components=1 -zxv
 }
 
 install_meteor
