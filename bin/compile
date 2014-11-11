@@ -6,8 +6,8 @@ cd /
 mkdir ~/.node/ && cd ~/.node/
 ls
 pwd
-curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar -C ~/.node/ --strip-components=1 -zxv
-mv node-v0.10.13-linux-x64 0.10.13
+curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | mv node-v0.10.13-linux-x64 0.10.13 | tar -C ~/.node/ --strip-components=1 -zx
+
 pwd
 # create symlink
 ln -s 0.10.13 current
