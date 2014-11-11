@@ -14,10 +14,10 @@ install_meteor() {
 build() {
   (
     echo "Building meteor bundle"
-    meteor bundle $CACHE_DIR/bundle.tar.gz
+    meteor build $CACHE_DIR/bundle
     mkdir -p $BUILD_DIR/.meteor/local/build
-    tar -zxf $CACHE_DIR/bundle.tar.gz --strip-components 1 -C $BUILD_DIR/.meteor/local/build
-    rm $CACHE_DIR/bundle.tar.gz
+    mv $CACHE_DIR/bundle $BUILD_DIR/.meteor/local/build
+    rm $CACHE_DIR/bundle
   )
 }
 
