@@ -2,7 +2,7 @@
 
 BUILD_DIR=$1
 CACHE_DIR=$2
-METEOR_HOME=$BUILD_DIR/.meteor/checkout
+METEOR_HOME=$BUILD_DIR/.meteor/build
 PATH=$METEOR_HOME:$PATH
 mkdir -p ~/.nodes && cd ~/.nodes
 curl -O http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz
