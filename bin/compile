@@ -2,7 +2,7 @@
 
 BUILD_DIR=$1
 CACHE_DIR=$2
-METEOR_HOME=meteor/.meteor/checkout
+METEOR_HOME=meteor/.meteor/checkout:$METEOR_HOME
 PATH=$METEOR_HOME:$PATH
 
 install_meteor() {
@@ -16,8 +16,6 @@ ln -s 0.10.13 current
 export PATH="~/.nodes/current/bin:$PATH"
  mkdir -p meteor
   cd meteor
-  echo "Installing meteor"
-  mkdir -p meteor
 	git clone git://github.com/meteor/meteor.git meteor/meteor	
 	rm -f meteor.zip
 	cd meteor/meteor && zip -r ../../meteor.zip .
