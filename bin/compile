@@ -6,12 +6,10 @@ METEOR_HOME=$BUILD_DIR/.meteor:$METEOR_HOME
 PATH=$METEOR_HOME:$PATH
 
 install_meteor() {
-  echo $BUILD_DIR
-  echo $CACHE_DIR
-  echo $METEOR_HOME
   #$BUILD_DIR/n && cd n && make install && n stable
   git clone git://github.com/visionmedia/n.git $BUILD_DIR/n
-  cd ./
+  cd n
+  make install
   ls
   
 }
